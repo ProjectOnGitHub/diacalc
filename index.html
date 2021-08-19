@@ -10,17 +10,19 @@
 </head>
 
 <body>
-  <form class="form">
-    <h1 class="form__title">Расчет количества хлебный единиц</h1>
-    <fieldset class="form__fieldset">
-      <label class="form__label">Количество углеводов на 100 грамм</label>
-      <input type="text" class="form__input form__input-carbs" name="carbs">
-      <label class="form__label">Количество хлебных единиц</label>
-      <input type="text" class="form__input form__input-unit" name="unit">
-    </fieldset>
-    <button type="submit" class="form__button">Рассчитать</button>
-    <p class="form__result"></p>
-  </form>
+  <main class="main">
+    <form class="form">
+      <h1 class="form__title">Расчет количества хлебный единиц</h1>
+      <fieldset class="form__fieldset">
+        <label class="form__label">Количество углеводов на 100 грамм</label>
+        <input type="number" class="form__input form__input-carbs" id="input-carbs" name="carbs" required  max="100">
+        <label class="form__label">Количество хлебных единиц</label>
+        <input type="number" class="form__input form__input-unit" id="input-unit" name="unit" required  max="10">
+      </fieldset>
+      <p class="form__result"></p>
+      <button type="submit" class="form__button">Рассчитать</button>
+    </form>
+  </main>
   <script src="./index.js"></script>
 
 </body>
