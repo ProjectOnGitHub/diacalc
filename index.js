@@ -1,20 +1,27 @@
 /*
 Нужна форма с двумя полями.
-в одном поле вводится количество углеводов на 100 грамм.
+В одном поле вводится количество углеводов на 100 грамм.
 В другое поле - количество хлебных единиц.
 При нажатии на кнопку все считается
 
-
-
-
 */
+const formElement = document.querySelector('.form');
+const calcResult = formElement.querySelector('.form__result');
+const inputCarbs = formElement.querySelector('.form__input-carbs');
+const inputUnit = formElement.querySelector('.form__input-unit');
 
-const carbohydrate = 10;
-const unit = 2;
+formElement.addEventListener('submit', formSubmitHandler);
 
-function calcCarbo(carbohydrate, unit) {
-  const carboSum = 100 * 10 / carbohydrate * unit;
-  return carboSum;
+
+function calcCarbs(carbs, unit) {
+  carbs = inputCarbs.value;
+  unit = inputUnit.value;
+  const carbsSum = (100 * 10 / carbs * unit).toFixed(1);
+  return calcResult.textContent = carbsSum;
 }
 
-calcCarbo(carbohydrate, unit);
+
+function formSubmitHandler(e) {
+  e.preventDefault();
+  calcCarbs();
+}
