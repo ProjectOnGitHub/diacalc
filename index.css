@@ -31,7 +31,6 @@
 }
 .form__input {
   height: 30px;
-  margin-bottom: 20px;
   border: 1px solid #d8d8d8;
   padding: 0 0 0 5px;
   outline: none;
@@ -65,4 +64,15 @@
   font-size: 25px;
   height: 30px;
   font-weight: bold;
+}
+
+.form__input_type_error {
+  border-color: red;
+}
+
+.form__input-error {
+  color: red;
+  font-size: 10px;
+  height: 18px;
+  padding: 0;
 }
