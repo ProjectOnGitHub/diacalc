@@ -6,7 +6,7 @@ const inputUnit = formElement.querySelector('.form__input-unit');
 function calcCarbs() {
   const carbs = inputCarbs.value.replace(/,/, '.');
   const unit = inputUnit.value.replace(/,/, '.');
-  const carbsSum = (100 * 10) / (carbs * unit).toFixed(1);
+  const carbsSum = ((1000 / carbs) * unit).toFixed(1);
   calcResult.textContent = carbsSum;
   return carbsSum;
 }
