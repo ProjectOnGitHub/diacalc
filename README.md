@@ -7,4 +7,4 @@
 
 Используется HTML, CSS и JavaScript.
 
-(Ссылка)[https://projectongithub.github.io/diacalc/]
+[Ссылка](https://projectongithub.github.io/diacalc/)
